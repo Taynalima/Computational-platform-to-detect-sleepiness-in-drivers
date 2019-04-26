@@ -1,0 +1,10 @@
+{% extends '__errors/jinja2/template.html' %}
+
+{% block message %}
+The server experienced an internal problem. In other words: You just totally broke everything.
+
+{% if app.debug and message %}
+	{{message}}
+{% endif %}
+
+{% endblock %}
